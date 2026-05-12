@@ -1,0 +1,24 @@
+{
+    "title": "管理员菜单",
+    "content": "选择:",
+    "buttons": [
+        {
+            "images": false,
+            "image": "textures/items/apple",
+            "money": 0,
+            "text": "菜单设置",
+            "command": "cd set",
+            "type": "comm",
+            "oplist": []
+        },
+        {
+            "images": false,
+            "image": "textures/items/apple",
+            "money": 0,
+            "text": "返回",
+            "command": "main",
+            "type": "form",
+            "oplist": []
+        }
+    ]
+}

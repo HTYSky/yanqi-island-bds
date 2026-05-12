@@ -1,0 +1,9 @@
+{
+    "name": "LegacyRemoteCall",
+    "entry": "LegacyRemoteCall.dll",
+    "version": "0.18.0",
+    "platform": "server",
+    "type": "native",
+    "description": "A part of LegacyScriptEngine",
+    "author": "LiteLDev"
+}

@@ -1,0 +1,52 @@
+/*
+* Glacie Configuration File
+* Glacie 配置文件
+*/
+{
+    /*
+    * Protocol Authorization Code
+    * If you don't have an activation code, please purchase it from https://afdian.com/item/19304bc4b2e811f0a78c52540025c377
+    * Protocol 激活码
+    * 如果你还没有激活码，请从 https://afdian.com/item/19304bc4b2e811f0a78c52540025c377 购买
+    */
+    "authorization-code": "",
+    /*
+    * Validation timeout duration (milliseconds)
+    * 验证超时时长（毫秒）
+    */
+    "verfiy-timeout-ms": 5000,
+    /*
+    * Whether to use minecraft:unknown as a placeholder
+    * 是否使用 minecraft:unknown 作为占位
+    */
+    "use-unknown-block-as-placeholder": true,
+    /*
+    * Whether to enable console output
+    * 是否启用控制台输出
+    */
+    "console-log": true,
+    /*
+    * Whether to modify disconnect screen
+    * 是否修改断开连接屏幕
+    */
+    "modify-disconnect-screen": true,
+    /*
+    * Allowed Network Protocols
+    * 允许连接的网络协议
+    */
+    "allow-connection-protocols": {
+        "766": true,
+        "776": true,
+        "786": true,
+        "800": true,
+        "818": true,
+        "819": true,
+        "827": true,
+        "844": true,
+        "859": true,
+        "860": true,
+        "898": true,
+        "924": true,
+        "944": true
+    }
+}

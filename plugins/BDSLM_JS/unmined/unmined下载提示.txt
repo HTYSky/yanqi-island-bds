@@ -1,0 +1,20 @@
+
+
+请到 https://unmined.net/downloads/ 
+下载Command Line Interface (CLI) windows X86 64BIT 版本
+(是命令行版本，不是GUI)，
+然后将除templates文件夹外的所有文件放到本目录下(./plugins/BDSLM_JS/unmined/)。
+
+===============
+
+插件BDSLM_JS目录如下
+- BDSLM_JS
+    ...
+    - unmined
+        config
+        library
+        templates        // 这个文件夹应为BDSLM_JS插件提供的, 不是网站下的。
+        libdeflate.dll
+        LICENSE.txt
+        README.md
+        unmined-cli.exe

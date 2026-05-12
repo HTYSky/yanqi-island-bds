@@ -1,0 +1,10 @@
+{
+    "money": 0,
+    "itemsTriggerMode": 0,
+    "score": "money",
+    "main": "main",
+    "items": [
+        "minecraft:clock"
+    ],
+    "shield": []
+}

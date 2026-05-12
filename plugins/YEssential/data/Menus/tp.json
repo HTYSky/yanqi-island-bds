@@ -1,0 +1,46 @@
+{
+    "title": "传送选项",
+    "content": "请选择：",
+    "buttons": [
+        {
+            "images": true,
+            "image": "textures/ui/FriendsDiversity",
+            "money": 0,
+            "text": "玩家传送",
+            "command": "tpa",
+            "type": "comm"
+        },
+        {
+            "images": true,
+            "image": "textures/ui/World",
+            "money": 0,
+            "text": "公共传送",
+            "command": "warp",
+            "type": "comm"
+        },
+        {
+            "images": true,
+            "image": "textures/ui/recap_glyph_desaturated",
+            "money": 0,
+            "text": "回到死亡点",
+            "command": "back",
+            "type": "comm"
+        },
+        {
+            "images": true,
+            "image": "textures/ui/icon_random",
+            "money": 0,
+            "text": "随机传送",
+            "command": "rtp",
+            "type": "comm"
+        },
+        {
+            "images": true,
+            "image": "textures/ui/back_button_hover",
+            "money": 0,
+            "text": "返回主菜单",
+            "command": "main",
+            "type": "form"
+        }
+    ]
+}

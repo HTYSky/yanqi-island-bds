@@ -1,0 +1,9 @@
+{
+    "name": "LegacyMoney",
+    "entry": "LegacyMoney.dll",
+    "version": "0.18.1",
+    "type": "native",
+    "platform": "server",
+    "description": "LLMoney, but adapted to LeviLamina",
+    "author": "LiteLDev"
+}

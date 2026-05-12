@@ -1,0 +1,176 @@
+{
+    "Bstats": {
+        "serverUUID": "",
+        "EnableModule": false,
+        "logSentData": false
+    },
+    "Update": {
+        "EnableModule": false,
+        "CheckInterval": 60000,
+        "versionUrl": "https://dl.mcmcc.cc/file/Version.json",
+        "baseUrl": "https://dl.mcmcc.cc/file/",
+        "files": [
+            {
+                "url": "YEssential.js",
+                "path": "YEssential.js"
+            },
+            {
+                "url": "modules/I18n.js",
+                "path": "./modules/I18n.js"
+            },
+            {
+                "url": "modules/Cleanmgr.js",
+                "path": "./modules/Cleanmgr.js"
+            },
+            {
+                "url": "modules/ConfigManager.js",
+                "path": "./modules/ConfigManager.js"
+            },
+            {
+                "url": "modules/AsyncUpdateChecker.js",
+                "path": "./modules/AsyncUpdateChecker.js"
+            },
+            {
+                "url": "modules/RadomTeleportSystem.js",
+                "path": "./modules/RadomTeleportSystem.js"
+            },
+            {
+                "url": "modules/Bstats.js",
+                "path": "./modules/Bstats.js"
+            },
+            {
+                "url": "modules/Cd.js",
+                "path": "./modules/Cd.js"
+            },
+            {
+                "url": "modules/PVP.js",
+                "path": "./modules/PVP.js"
+            },
+            {
+                "url": "modules/Redpacket.js",
+                "path": "./modules/Redpacket.js"
+            },
+            {
+                "url": "modules/Fcam.js",
+                "path": "./modules/Fcam.js"
+            },
+            {
+                "url": "modules/Notice.js",
+                "path": "./modules/Notice.js"
+            },
+            {
+                "url": "modules/Sign.js",
+                "path": "./modules/Sign.js"
+            },
+            {
+                "url": "modules/Crash.js",
+                "path": "./modules/Crash.js"
+            }
+        ],
+        "reloadDelay": 1000,
+        "timeout": 30000,
+        "checkMissingFilesOnStart": true
+    },
+    "Economy": {
+        "mode": "scoreboard",
+        "RankingModel": "New",
+        "Scoreboard": "money",
+        "CoinName": "金币",
+        "PayTaxRate": 0
+    },
+    "Version": 289,
+    "PVP": {
+        "EnabledModule": true,
+        "DangerousBlocks": []
+    },
+    "Crash": {
+        "EnabledModule": false,
+        "LogCrashInfo": true
+    },
+    "Fcam": {
+        "EnableModule": false,
+        "CostMoney": 0,
+        "TimeOut": 0
+    },
+    "Notice": {
+        "EnableModule": true,
+        "Join_ShowNotice": true,
+        "IsUpdate": false
+    },
+    "RedPacket": {
+        "EnabledModule": false,
+        "expireTime": 300,
+        "maxAmount": 10000,
+        "maxCount": 50,
+        "minAmount": 1
+    },
+    "RTP": {
+        "EnabledModule": true,
+        "minRadius": 100,
+        "maxRadius": 5000,
+        "cooldown": 300,
+        "cost": 0,
+        "allowDimensions": [
+            0,
+            1,
+            2
+        ],
+        "safeCheck": true,
+        "maxAttempts": 50,
+        "Animation": 1,
+        "enableParticle": true,
+        "enableSound": true,
+        "logToFile": true
+    },
+    "Hub": {
+        "EnabledModule": false,
+        "x": 0,
+        "y": 100,
+        "z": 0,
+        "dimid": 0,
+        "isSet": false
+    },
+    "tpa": {
+        "EnabledModule": true,
+        "isDelayEnabled": true,
+        "cost": 0,
+        "maxDelay": 20,
+        "requestTimeout": 60,
+        "promptType": "form"
+    },
+    "Home": {
+        "add": 0,
+        "del": 0,
+        "tp": 0,
+        "MaxHome": 50
+    },
+    "wh": {
+        "EnableModule": false,
+        "status": 0,
+        "whmotdmsg": "服务器维护中，请勿进入！",
+        "whgamemsg": "服务器正在维护中，请您稍后再来!"
+    },
+    "CrossServerTransfer": {
+        "EnabledModule": false,
+        "servers": [
+            {
+                "server_name": "生存服",
+                "server_ip": "127.0.0.1",
+                "server_port": 19132
+            }
+        ]
+    },
+    "Motd": {
+        "EnabledModule": true,
+        "message": [
+            "欢迎来到雁栖岛！",
+            "Welcome to Yanqi Island!"
+        ]
+    },
+    "SimpleLogOutPut": 0,
+    "suicide": 0,
+    "Back": 0,
+    "Warp": 0,
+    "BackTipAfterDeath": 1,
+    "KeepInventory": 0
+}

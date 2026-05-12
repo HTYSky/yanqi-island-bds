@@ -1,0 +1,17 @@
+{
+  "name": "legacy-script-engine-nodejs",
+  "entry": "legacy-script-engine-nodejs.dll",
+  "version": "0.18.2",
+  "type": "native",
+  "platform": "server",
+  "description": "A plugin engine for running LLSE plugins on LeviLamina",
+  "author": "LiteLDev",
+  "dependencies": [
+    {
+      "name": "LegacyMoney"
+    },
+    {
+      "name": "LegacyRemoteCall"
+    }
+  ]
+}

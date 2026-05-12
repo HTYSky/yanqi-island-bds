@@ -1,0 +1,65 @@
+{
+  "Failed to enable: {0}": "Attivazione non riuscita: {0}",
+  "Failed to load: {0}": "Caricamento non riuscito: {0}",
+  "Cannot save default configurations to {0}": "Impossibile salvare le configurazioni predefinite in {0}",
+  "Failed to read BaseLib at {0}": "Impossibile leggere BaseLib in {0}",
+  "Failed to register plugin manager": "Impossibile registrare il gestore plugin",
+  "Failed to load plugin code": "Impossibile caricare il codice del plugin",
+  "Failed to read plugin entry at {0}": "Impossibile leggere la voce del plugin in {0}",
+  "Failed to load plugin {0}: {1}\\n{2}": "Impossibile caricare il plugin {0}: {1}\\n{2}",
+  "Failed to unload plugin {0}: {1}": "Impossibile scaricare il plugin {0}: {1}",
+  "Migrating legacy plugin at {0}": "Migrazione del plugin legacy in {0}",
+  "Failed to migrate legacy plugin at {0}: {1} already exists": "Impossibile migrare il plugin legacy in {0}: {1} esiste già",
+  "Failed to create directory {0}": "Impossibile creare la directory {0}",
+  "Migrating legacy plugins": {
+    "": {
+      "": {
+        "": "Migrazione dei plugin legacy in corso..."
+      }
+    }
+  },
+  "Legacy plugins have been migrated, please restart the server to load them!": "I plugin legacy sono stati migrati, riavvia il server per caricarli!",
+  "Overworld": "Overworld",
+  "Nether": "Nether",
+  "End": "End",
+  "Other dimension": "Altra dimensione",
+  "JSON parse error": "Errore di parsing JSON",
+  "Npm finished successfully": {
+    "": "Npm completato con successo"
+  },
+  "Executing \"npm install\" for plugin {name}": {
+    "": {
+      "": {
+        "": "Esecuzione di \"npm install\" per il plugin {name}..."
+      }
+    }
+  },
+  "Error occurred": {
+    " Exit code: {code}": "Si è verificato un errore. Codice di uscita: {code}"
+  },
+  "Executing \"pip install\" for plugin {name}": {
+    "": {
+      "": {
+        "": "Esecuzione di \"pip install\" per il plugin {name}..."
+      }
+    }
+  },
+  "Pip finished successfully": {
+    "": "Pip completato con successo"
+  },
+  "Runtime command {} already exists, changes will not beapplied except for setOverload!": "Il comando runtime {} esiste già, le modifiche non saranno applicate tranne setOverload!",
+  "Failed to initialize file mapping": "Impossibile inizializzare la mappatura dei file",
+  "Failed to initialize map file": "Impossibile inizializzare il file di mappa",
+  "Command {} failed to execute, is the plugin unloaded?": "Esecuzione del comando {} non riuscita, il plugin è stato scaricato?",
+  "Could not find {} in registered commands": {
+    "": "Impossibile trovare {} nei comandi registrati."
+  },
+  "Event {} not found!": "Evento {} non trovato!",
+  "Failed to enable plugin {0}: {1}\\n{2}": "Impossibile attivare il plugin {0}: {1}\\n{2}",
+  "Failed to enable plugin {0}: {1}": "Impossibile attivare il plugin {0}: {1}",
+  "Failed to disable plugin {0}: {1}": "Impossibile disattivare il plugin {0}: {1}",
+  "You don't have permission to use this command": {
+    "": "Non hai l'autorizzazione per usare questo comando."
+  },
+  "Failed to register legacy command: {}": "Impossibile registrare il comando legacy: {}"
+}

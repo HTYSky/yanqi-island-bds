@@ -1,0 +1,25 @@
+{
+    "version": "1.0.0",
+    "sign": {
+        "switch": true,
+        "gui_arrange": 3
+    },
+    "random_money": {
+        "min_money": 1000,
+        "max_money": 10000
+    },
+    "random_exp": {
+        "min_exp": 100,
+        "max_exp": 1000
+    },
+    "reward": [
+        "random_exp"
+    ],
+    "addition": {
+        "3": "random_exp",
+        "5": "random_exp",
+        "7": "random_exp",
+        "15": "random_exp",
+        "30": "random_exp"
+    }
+}

@@ -1,0 +1,68 @@
+{
+    "modules": [
+        {
+            "path": "AsyncUpdateChecker.js",
+            "name": "AsyncUpdateChecker"
+        },
+        {
+            "path": "Bstats.js",
+            "name": "Bstats"
+        },
+        {
+            "path": "Cd.js",
+            "name": "Cd"
+        },
+        {
+            "path": "Cleanmgr.js",
+            "name": "Cleanmgr"
+        },
+        {
+            "path": "ConfigManager.js",
+            "name": "ConfigManager"
+        },
+        {
+            "path": "Crash.js",
+            "name": "Crash"
+        },
+        {
+            "path": "Fcam.js",
+            "name": "Fcam"
+        },
+        {
+            "path": "Home.js",
+            "name": "Home"
+        },
+        {
+            "path": "I18n.js",
+            "name": "I18n"
+        },
+        {
+            "path": "Notice.js",
+            "name": "Notice"
+        },
+        {
+            "path": "PluginInfo.js",
+            "name": "PluginInfo"
+        },
+        {
+            "path": "PVP.js",
+            "name": "PVP"
+        },
+        {
+            "path": "RadomTeleportSystem.js",
+            "name": "RadomTeleportSystem"
+        },
+        {
+            "path": "Redpacket.js",
+            "name": "Redpacket"
+        },
+        {
+            "path": "Sign.js",
+            "name": "Sign"
+        },
+        {
+            "path": "Warp.js",
+            "name": "Warp"
+        }
+    ]
+}

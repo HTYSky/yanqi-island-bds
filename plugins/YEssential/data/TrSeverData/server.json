@@ -1,0 +1,9 @@
+{
+    "servers": [
+        {
+            "server_name": "生存服",
+            "server_ip": "127.0.0.1",
+            "server_port": 19132
+        }
+    ]
+}

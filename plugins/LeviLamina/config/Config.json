@@ -1,0 +1,54 @@
+{
+    "version": 36,
+    "language": "system",
+    "modules": {
+        "command": {
+            "tpdimCommand": {
+                "enabled": true,
+                "permission": "GameDirectors"
+            },
+            "crashCommand": {
+                "enabled": false,
+                "permission": "GameDirectors"
+            },
+            "versionCommand": {
+                "enabled": true,
+                "permission": "GameDirectors"
+            },
+            "modManageCommand": {
+                "enabled": true,
+                "permission": "Admin"
+            }
+        },
+        "crashLogger": {
+            "enabled": true,
+            "builtin": false,
+            "uploadToSentry": true
+        },
+        "disableAutoCompactionLog": true
+    },
+    "targeted": {
+        "enableStatistics": true,
+        "simpleServerLogger": {
+            "enabled": false,
+            "playerChat": true,
+            "playerCommand": true,
+            "playerPermission": true
+        },
+        "forceEnableCheatCommands": true,
+        "checkRunningBDS": true,
+        "playerInfo": {
+            "alwaysLaunch": false
+        },
+        "vulnerabilityFixes": {
+            "enable": true,
+            "subChunkRequest": true,
+            "rakNet": true,
+            "unverifiedCertificate": true,
+            "certificate": true,
+            "itemReadUserData": true,
+            "disconnectClient": true,
+            "limitIPFrequency": true
+        }
+    }
+}
