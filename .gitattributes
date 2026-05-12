@@ -1,0 +1,11 @@
+*.exe filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+7za.exe !text !filter !merge !diff
+PeEditor.exe !text !filter !merge !diff
+bdsdown.exe !text !filter !merge !diff
+plugins/BDSLM_JS/unmined/templates/default.web.template.zip !text !filter !merge !diff
+plugins/BDSLM_JS/unmined/unmined-cli.exe !text !filter !merge !diff
+plugins/LeviLamina/CrashLogger.exe !text !filter !merge !diff
+resource_packs/EasyPacks.exe !text !filter !merge !diff
+worlds/YanqiLake/EasyPacks.exe !text !filter !merge !diff
+plugins/legacy-script-engine-nodejs/libnode.dll filter=lfs diff=lfs merge=lfs -text

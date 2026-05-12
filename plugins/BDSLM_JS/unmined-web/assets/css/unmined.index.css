@@ -1,0 +1,409 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    float: right;
+    image-rendering: pixelated;
+}
+
+.mouseposition {
+    background-color: white;
+    padding: 3px;
+    text-align: right;
+}
+
+.mousepositioncoord {
+    min-width: 40px;
+    display: inline-block;
+}
+
+div.ol-mouse-position {
+    background-color: white;
+    padding: 6px;
+    border-radius: 3px;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.ol-zoom {
+    z-index: 999;
+}
+
+@keyframes frames-fade-out {
+    100% {
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    animation: frames-fade-out 1s linear;
+}
+
+/* 自定义字体 */
+@font-face {
+    font-family: "Minecraft";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../font/minecraft_font.ttf");
+}
+
+@font-face {
+    font-family: "Unifont";
+    src: url("../font/unifont-15.1.04.otf");
+}
+
+/* 自定义ol样式 */
+.ol-zoomslider button {
+    height: 22px;
+}
+.ol-mouse-position {
+    left: 3em;
+    right: unset;
+}
+
+/* 聊天栏样式 */
+.message-box {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    width: 40%;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    font-size: 15px;
+    font-family: "Minecraft";
+}
+
+.message-navbar {
+    width: 100%;
+    height: 30px;
+    background-color: black; 
+    opacity: 0.6;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 3px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.message-navbar div{
+    width: 20%;
+    height: 100%;
+    color: black;
+    font-size: 0.8em;
+    font-family: "Minecraft";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(210, 210, 210); 
+    border: 0px;
+    border-radius: 3px;
+    margin-right: 2px;
+    cursor: pointer;
+}
+.message-history-container {
+    width: 100%;
+    height: max-content;
+}
+.message-lastmsg {
+    /* position: absolute;
+    bottom: 0px; */
+
+    display: flex;
+    align-content: center;
+    overflow-x: hidden; 
+    white-space: nowrap;
+    width: 100%;
+    height: 30px;
+    padding: 0 5px 0 8px;
+    border: 0px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+    background-color: black;
+    opacity: 0.5;
+}
+.message-input-container {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    width: 100%;
+    box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.message-input{
+    height: 100%;
+    width: 70%;
+    background-color: black;
+    opacity: 0.5;
+    
+    border: 0px;
+    padding: 0 5px 0 8px;
+    outline: 0;
+
+    color: white;
+    font-size: 1em;
+    font-family: "Minecraft";
+    /*解决input框和width设定不符*/
+    box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.message-send-button{
+    height: 100%;
+    width: 30%;
+    background-color: rgb(220, 220, 220);
+    opacity: 0.8;
+    border: 0px;
+    border-radius: 1px;
+    color: black;
+    font-size: 0.9em;
+    font-family: "Minecraft";
+    cursor: pointer;
+
+    box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+} 
+
+.message-send-button:hover{
+    background-color: rgb(160, 160, 160);
+}
+.message-send-button:active{
+    background-color: rgb(100, 100, 100); 
+}
+
+.message-lastmsg p{
+    color: white;
+    font-size: 1em;
+    font-family: "Minecraft";
+    margin: 3px 0 3px 0px;
+    overflow: hidden; 
+    white-space: nowrap;
+}
+
+.message-input:focus {
+    /* background-color: red; */
+    /* border-radius: 0px; */
+    padding: 0 5px 0 8px;
+    outline: none;
+    border: 0;
+    /* outline: 3px solid aqua;
+    box-shadow: 1px 1px 10px 1px aqua; */
+}
+.message-playerlist {
+    height: calc(28vh);
+    width: 100%;
+    background-color: black;
+    opacity: 0.6;
+    color: white;
+    font-size: 1em;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0 5px 0 8px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    white-space: pre-wrap; 
+    word-wrap: break-word;
+}
+.message-history {
+    height: calc(28vh);
+    width: 100%;
+    background-color: black;
+    opacity: 0.6;
+    color: white;
+    font-size: 1em;
+
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0 5px 0 8px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.message-webOnline {
+    height: calc(28vh);
+    width: 100%;
+    background-color: black;
+    opacity: 0.6;
+    color: white;
+    font-size: 1em;
+
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0 5px 0 8px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    white-space: pre-wrap;
+    word-wrap: break-word; 
+}
+
+.message-history p{
+    margin: 3px 0 3px 0px;
+}
+
+/* 登录表单样式 */
+#login-form {
+    background-color: black;
+    opacity: 0.7;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* 用户名和密码输入框列 */
+#login-form .input-column {
+    display: flex;
+    flex-direction: column;
+    width: 45%; /* 根据实际情况调整宽度 */
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"] {
+    height: 25px;
+    margin: 2px 0;
+    background-color: black;
+    opacity: 0.8;
+    border: 0px;
+    padding: 0 5px;
+    outline: 0;
+    color: white;
+    font-size: 1em;
+    font-family: "Minecraft";
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+/* 记住密码和登录按钮列 */
+#login-form .button-column {
+    display: flex;
+    flex-direction: column;
+    width: 45%; /* 根据实际情况调整宽度 */
+    justify-content: center;
+    align-items: center;
+}
+
+#login-form .button-column > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#login-form input[type="checkbox"] {
+    margin: 0 5px 0 0; /* 调整复选框的右边距 */
+}
+
+#login-form label {
+    color: white;
+    font-size: 1em;
+    font-family: "Minecraft";
+}
+
+#login-form button {
+    height: 25px;
+    background-color: black;
+    opacity: 0.8;
+    border: 0px;
+    padding: 0 10px;
+    color: white;
+    font-size: 1em;
+    font-family: "Minecraft";
+    cursor: pointer;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+#login-form button:hover {
+    background-color: rgb(160, 160, 160);
+}
+
+#login-form button:active {
+    background-color: rgb(100, 100, 100);
+}
+
+#login-status {
+    display: flex;
+    justify-content: space-between;
+    height: max-content;
+    background-color: black;
+    opacity: 0.5;
+    padding: 5px;
+    color: white;
+    font-size: 0.8em;
+    font-family: "Minecraft";
+}
+
+#logout-button {
+    background-color: rgb(210, 210, 210); 
+    color: black;
+    font-size: 1em;
+    font-family: "Minecraft";
+    cursor: pointer; 
+    border-radius: 3px;
+    padding: 0 5px;
+    border: 0px;
+    align-content: center;
+}
+#logout-button:hover {
+    background-color: rgb(160, 160, 160);
+}
+
+#logout-button:active {
+    background-color: rgb(100, 100, 100);
+}
+
+.mc {
+    padding: 0;
+    background-color: unset;
+}
+
+@media screen and (max-width: 768px) {
+    .message-box {
+        font-size: 12px;
+        width: 80%;
+    }
+}
+/* @media screen and (max-width: 765px) {
+    .message-box {
+        width: 80%;
+    }
+} */
+
+
+/* 
+.message-box-multiple{
+    overflow-y: "scroll";
+    height: 120px;
+}
+.message-box-single{
+    overflow-y: "scroll";
+    height: 30px;
+    line-height: 26px;
+}
+
+.message-box p{
+    position: relative;
+    color: aqua;
+    font-size: 14px;
+    margin: 2px 0 2px 7px;
+} */
+
+
+@media only screen and (max-width: 768px) {
+    
+}

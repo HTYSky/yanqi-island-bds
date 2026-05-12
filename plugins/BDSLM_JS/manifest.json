@@ -1,0 +1,13 @@
+{
+    "entry": "BDSLM_JS.js",
+    "name": "BDSLM_JS",
+    "type": "lse-nodejs",
+	"author": "PA733, Wn1027",
+    "description": "卫星图",
+    "version": "1.4.0",
+    "dependencies": [
+        {
+            "name": "legacy-script-engine-nodejs"
+        }
+    ]
+}

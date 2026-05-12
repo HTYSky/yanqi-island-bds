@@ -1,0 +1,72 @@
+{
+    "iconList": [
+        "maker_triangle_red.png",
+        "maker_x.png",
+        "marker_aa.png",
+        "marker_blue.png",
+        "marker_circle.png",
+        "marker_cyan.png",
+        "marker_green.png",
+        "marker_orange.png",
+        "marker_red.png",
+        "marker_white.png",
+        "marker_yello.png"
+    ],
+    "customMarkerLayers_default": {
+        "layerPropertites": {
+            "minZoom": null,
+            "maxZomm": null,
+            "zIndex": null,
+            "opacity": 1
+        },
+        "controlConfig": {
+            "isEnabled": true
+        },
+        "markers_default": {
+            "imageRotation": null,
+            "imageAnchor": [
+                0.5,
+                0.5
+            ],
+            "imageScale": 1.5,
+            "textColor": "white",
+            "offsetX": 0,
+            "offsetY": 18,
+            "font": "12px Microsoft Yahei",
+            "textAlign": "center",
+            "textJustify": "center",
+            "textPadding": [
+                2,
+                8,
+                2,
+                8
+            ],
+            "textStrokeColor": "black",
+            "textStrokeWidth": 1,
+            "textBackgroundColor": "rgba(105,105,105,0.42)",
+            "textBackgroundRadius": 6,
+            "textBackgroundStrokeColor": null,
+            "textBackgroundStrokeWidth": 1
+        }
+    },
+    "customMarkerLayers": [
+        {
+            "layerName": "test_example",
+            "layerPropertites": {
+                "minZoom": 4,
+                "maxZomm": 5,
+                "zIndex": 3,
+                "opacity": 1
+            },
+            "controlConfig": {
+                "isEnabled": false,
+                "img": "assets/ui/marker/marker_cyan.png",
+                "openTitle": "§c特殊地形(开)",
+                "closeTitle": "§c特殊地形(关)"
+            },
+            "markers_default": {
+                "image": "assets/ui/marker/marker_cyan.png"
+            }
+        }
+    ]
+}

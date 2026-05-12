@@ -1,0 +1,92 @@
+{
+    "webserver": {
+        "port": 5110,
+        "mapTitle": "default"
+    },
+    "mapRender": {
+        "zoomin": 4,
+        "zoomout": -5
+    },
+    "autoRend": {
+        "isEnabled": true,
+        "cycle": 120
+    },
+    "openlayers": {
+        "options": {
+            "enableGrid": true,
+            "showGrid": true,
+            "binaryGrid": true,
+            "showScaleBar": false,
+            "denseGrid": false,
+            "showMarkers": true,
+            "showPlayers": true,
+            "centerX": 0,
+            "centerZ": 0
+        },
+        "playerMarker": {
+            "isEnabled": true,
+            "layerName": "playerMarker",
+            "layerPropertites": {
+                "minZoom": 0,
+                "maxZomm": 7,
+                "zIndex": 999,
+                "opacity": 1
+            },
+            "controlConfig": {
+                "isEnabled": true,
+                "img": "assets/ui/marker/marker_white.png",
+                "openTitle": "玩家(开)",
+                "closeTitle": "玩家(关)"
+            },
+            "markerConfig": {
+                "image": "assets/ui/marker/marker_cyan.png",
+                "imageRotation": true,
+                "imageAnchor": [
+                    0.5,
+                    0.5
+                ],
+                "imageScale": "1.5",
+                "textAlign": "center",
+                "textJustify": "center",
+                "textPadding": [
+                    2,
+                    8,
+                    2,
+                    8
+                ],
+                "textColor": "white",
+                "textStrokeColor": null,
+                "textStrokeWidth": 1,
+                "textBackgroundColor": "rgba(69,69,69,0.42)",
+                "textBackgroundRadius": 6,
+                "textBackgroundStrokeColor": null,
+                "textBackgroundStrokeWidth": 1,
+                "offsetX": 0,
+                "offsetY": 17,
+                "font": "12px Microsoft Yahei"
+            }
+        }
+    },
+    "webChat": {
+        "isEnabled": true,
+        "tempMsgMaxNum": 100,
+        "tempMsgExpires": 1440,
+        "maxMsgLength": 100,
+        "maxSendMsgNumPerMinute": 30,
+        "secretKey": "997d663236e04c8c8d4e5794c53834bb"
+    },
+    "yeEssentialSync": {
+        "enabled": true,
+        "debounceMs": 400,
+        "homeDataPath": "./plugins/YEssential/data/homedata.json",
+        "warpDataPath": "./plugins/YEssential/data/warpdata.json",
+        "warpLayerName": "公共传送点",
+        "homeLayerName": "公开的家",
+        "warpControlImg": "assets/ui/marker/marker_circle.png",
+        "homeControlImg": "assets/ui/marker/marker_mansion.png",
+        "warpOpenTitle": "公共传送点(开)",
+        "warpCloseTitle": "公共传送点(关)",
+        "homeOpenTitle": "公开的家(开)",
+        "homeCloseTitle": "公开的家(关)"
+    }
+}
