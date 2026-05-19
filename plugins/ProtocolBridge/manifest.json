@@ -1,0 +1,7 @@
+{
+    "name": "ProtocolBridge",
+    "entry": "ProtocolBridge.dll",
+    "version": "1.0.0",
+    "type": "native",
+    "platform": "server"
+}

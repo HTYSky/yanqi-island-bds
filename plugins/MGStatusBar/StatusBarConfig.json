@@ -1,0 +1,21 @@
+{
+    "serverAnchors": {
+        "anchorA": null,
+        "anchorB": null,
+        "anchorC": null
+    },
+    "80da221f-73d7-393a-9a72-8a285adac610": {
+        "isHidden": false,
+        "showName": true,
+        "showOnlineCount": true,
+        "showBotSeparately": true,
+        "showMoney": false,
+        "showPlaytime": true,
+        "showFault": true,
+        "showAuxiliary": true,
+        "showDirectionBar": true,
+        "showTeamFund": true,
+        "showOnlineTeammates": false,
+        "lodestonePos": null
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "EconomyType": 0,
+    "scoreboard": "money",
+    "quotaMoney": 0,
+    "rateMin": 0,
+    "default_quantity": 20,
+    "max_quantity": 20,
+    "whitelist": 0,
+    "blacklist": 0,
+    "billingEnabled": 0,
+    "saveInterval": 60000,
+    "cleanupExpiredPlayerDataEnabled": 0,
+    "cleanupExpiredPlayerDataInterval": 10
+}

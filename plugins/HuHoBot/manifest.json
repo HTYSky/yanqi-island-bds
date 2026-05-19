@@ -1,0 +1,10 @@
+{
+    "entry": "huhobot.js",
+    "name": "HuHoBot",
+    "type": "lse-quickjs",
+    "dependencies": [
+        {
+            "name": "legacy-script-engine-quickjs"
+        }
+    ]
+}

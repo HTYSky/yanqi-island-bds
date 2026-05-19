@@ -1,0 +1,14 @@
+{
+    "entry": "JustTPS.js",
+    "name": "JustTPS",
+    "type": "lse-quickjs",
+    "version": "1.0.0",
+    "author": "1503Dev",
+    "description": "计算服务器TPS，仅此而已",
+    "extraInfo": {},
+    "dependencies": [
+        {
+            "name": "legacy-script-engine-quickjs"
+        }
+    ]
+}

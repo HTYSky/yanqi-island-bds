@@ -1,0 +1,18 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "暮光大陆服务器专用纹理包（主包），包含菜单、表情包、图片等，为服务器必要依赖，不可删除",
+        "name": "暮光大陆服务器资源包",
+        "uuid": "9da19fe7-fa38-42dc-b922-5bb2f821f873",
+        "version": [1, 54, 90],
+        "min_engine_version": [1, 21, 2]
+    },
+    "modules": [
+        {
+            "description": "暮光大陆服务器资源包，2024年12月07日合并小内容更新，2025年1月27日新增部分贴图补丁，2026年4月1日新增彩蛋。",
+            "type": "resources",
+            "uuid": "5ddafa76-809c-46f2-b2d0-0fcf06441194",
+            "version": [1, 12, 10]
+        }
+    ]
+}

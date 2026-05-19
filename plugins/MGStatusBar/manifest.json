@@ -1,0 +1,13 @@
+{
+    "entry": "MGStatusBar.js",
+    "name": "MGStatusBar",
+    "type": "lse-quickjs",
+    "version": "2.2.1",
+    "description": "极简的状态栏",
+    "extraInfo": {},
+    "dependencies": [
+        {
+            "name": "legacy-script-engine-quickjs"
+        }
+    ]
+}

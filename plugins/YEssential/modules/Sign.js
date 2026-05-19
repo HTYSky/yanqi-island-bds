@@ -351,7 +351,7 @@ function initSignModule() {
         } else if (rewardObj.type === "money") {
             Money.add(player, rewardObj.reward);
         } else if (rewardObj.type === "exp") {
-            player.addExp(Number(rewardObj.reward));
+            player.addExperience(Number(rewardObj.reward));
         }
     }
 

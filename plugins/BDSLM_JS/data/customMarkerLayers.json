@@ -39,6 +39,286 @@
                     "z": -365.4,
                     "text": "村庄1（平原）",
                     "image": "assets/ui/marker/marker_circle.png"
+                },
+                {
+                    "imageAnchor": [
+                        0.5,
+                        0.5
+                    ],
+                    "imageScale": 1.5,
+                    "textColor": "white",
+                    "offsetX": 0,
+                    "offsetY": 18,
+                    "font": "12px Microsoft Yahei",
+                    "textAlign": "center",
+                    "textJustify": "center",
+                    "textPadding": [
+                        2,
+                        8,
+                        2,
+                        8
+                    ],
+                    "textStrokeColor": "black",
+                    "textStrokeWidth": 1,
+                    "textBackgroundColor": "rgba(105,105,105,0.42)",
+                    "textBackgroundRadius": 6,
+                    "textBackgroundStrokeWidth": 1,
+                    "x": -817.6,
+                    "z": 203.1,
+                    "text": "村庄",
+                    "image": "assets/ui/marker/marker_circle.png"
+                },
+                {
+                    "imageAnchor": [
+                        0.5,
+                        0.5
+                    ],
+                    "imageScale": 1.5,
+                    "textColor": "white",
+                    "offsetX": 0,
+                    "offsetY": 18,
+                    "font": "12px Microsoft Yahei",
+                    "textAlign": "center",
+                    "textJustify": "center",
+                    "textPadding": [
+                        2,
+                        8,
+                        2,
+                        8
+                    ],
+                    "textStrokeColor": "black",
+                    "textStrokeWidth": 1,
+                    "textBackgroundColor": "rgba(105,105,105,0.42)",
+                    "textBackgroundRadius": 6,
+                    "textBackgroundStrokeWidth": 1,
+                    "x": -777.8,
+                    "z": 532,
+                    "text": "前哨站",
+                    "image": "assets/ui/marker/marker_circle.png"
+                },
+                {
+                    "imageAnchor": [
+                        0.5,
+                        0.5
+                    ],
+                    "imageScale": 1.5,
+                    "textColor": "white",
+                    "offsetX": 0,
+                    "offsetY": 18,
+                    "font": "12px Microsoft Yahei",
+                    "textAlign": "center",
+                    "textJustify": "center",
+                    "textPadding": [
+                        2,
+                        8,
+                        2,
+                        8
+                    ],
+                    "textStrokeColor": "black",
+                    "textStrokeWidth": 1,
+                    "textBackgroundColor": "rgba(105,105,105,0.42)",
+                    "textBackgroundRadius": 6,
+                    "textBackgroundStrokeWidth": 1,
+                    "x": -894.8,
+                    "z": 931.1,
+                    "text": "传送门",
+                    "image": "assets/ui/marker/marker_circle.png"
+                },
+                {
+                    "imageAnchor": [
+                        0.5,
+                        0.5
+                    ],
+                    "imageScale": 1.5,
+                    "textColor": "white",
+                    "offsetX": 0,
+                    "offsetY": 18,
+                    "font": "12px Microsoft Yahei",
+                    "textAlign": "center",
+                    "textJustify": "center",
+                    "textPadding": [
+                        2,
+                        8,
+                        2,
+                        8
+                    ],
+                    "textStrokeColor": "black",
+                    "textStrokeWidth": 1,
+                    "textBackgroundColor": "rgba(105,105,105,0.42)",
+                    "textBackgroundRadius": 6,
+                    "textBackgroundStrokeWidth": 1,
+                    "x": 1230.3,
+                    "z": -342.9,
+                    "text": "樱花林",
+                    "image": "assets/ui/marker/marker_circle.png"
+                },
+                {
+                    "imageAnchor": [
+                        0.5,
+                        0.5
+                    ],
+                    "imageScale": 1.5,
+                    "textColor": "white",
+                    "offsetX": 0,
+                    "offsetY": 18,
+                    "font": "12px Microsoft Yahei",
+                    "textAlign": "center",
+                    "textJustify": "center",
+                    "textPadding": [
+                        2,
+                        8,
+                        2,
+                        8
+                    ],
+                    "textStrokeColor": "black",
+                    "textStrokeWidth": 1,
+                    "textBackgroundColor": "rgba(105,105,105,0.42)",
+                    "textBackgroundRadius": 6,
+                    "textBackgroundStrokeWidth": 1,
+                    "x": 3144.9,
+                    "z": -898.9,
+                    "text": "蘑菇岛",
+                    "image": "assets/ui/marker/marker_circle.png"
+                },
+                {
+                    "imageAnchor": [
+                        0.5,
+                        0.5
+                    ],
+                    "imageScale": 1.5,
+                    "textColor": "white",
+                    "offsetX": 0,
+                    "offsetY": 18,
+                    "font": "12px Microsoft Yahei",
+                    "textAlign": "center",
+                    "textJustify": "center",
+                    "textPadding": [
+                        2,
+                        8,
+                        2,
+                        8
+                    ],
+                    "textStrokeColor": "black",
+                    "textStrokeWidth": 1,
+                    "textBackgroundColor": "rgba(105,105,105,0.42)",
+                    "textBackgroundRadius": 6,
+                    "textBackgroundStrokeWidth": 1,
+                    "x": -1409.4,
+                    "z": 1377.6,
+                    "text": "竹林/热带森林",
+                    "image": "assets/ui/marker/marker_circle.png"
+                },
+                {
+                    "imageAnchor": [
+                        0.5,
+                        0.5
+                    ],
+                    "imageScale": 1.5,
+                    "textColor": "white",
+                    "offsetX": 0,
+                    "offsetY": 18,
+                    "font": "12px Microsoft Yahei",
+                    "textAlign": "center",
+                    "textJustify": "center",
+                    "textPadding": [
+                        2,
+                        8,
+                        2,
+                        8
+                    ],
+                    "textStrokeColor": "black",
+                    "textStrokeWidth": 1,
+                    "textBackgroundColor": "rgba(105,105,105,0.42)",
+                    "textBackgroundRadius": 6,
+                    "textBackgroundStrokeWidth": 1,
+                    "x": -963.4,
+                    "z": 3985.3,
+                    "text": "沼泽地",
+                    "image": "assets/ui/marker/marker_circle.png"
+                },
+                {
+                    "imageAnchor": [
+                        0.5,
+                        0.5
+                    ],
+                    "imageScale": 1.5,
+                    "textColor": "white",
+                    "offsetX": 0,
+                    "offsetY": 18,
+                    "font": "12px Microsoft Yahei",
+                    "textAlign": "center",
+                    "textJustify": "center",
+                    "textPadding": [
+                        2,
+                        8,
+                        2,
+                        8
+                    ],
+                    "textStrokeColor": "black",
+                    "textStrokeWidth": 1,
+                    "textBackgroundColor": "rgba(105,105,105,0.42)",
+                    "textBackgroundRadius": 6,
+                    "textBackgroundStrokeWidth": 1,
+                    "x": -309.1,
+                    "z": -538.4,
+                    "text": "大矿洞",
+                    "image": "assets/ui/marker/marker_circle.png"
+                },
+                {
+                    "imageAnchor": [
+                        0.5,
+                        0.5
+                    ],
+                    "imageScale": 1.5,
+                    "textColor": "white",
+                    "offsetX": 0,
+                    "offsetY": 18,
+                    "font": "12px Microsoft Yahei",
+                    "textAlign": "center",
+                    "textJustify": "center",
+                    "textPadding": [
+                        2,
+                        8,
+                        2,
+                        8
+                    ],
+                    "textStrokeColor": "black",
+                    "textStrokeWidth": 1,
+                    "textBackgroundColor": "rgba(105,105,105,0.42)",
+                    "textBackgroundRadius": 6,
+                    "textBackgroundStrokeWidth": 1,
+                    "x": 1787.2,
+                    "z": -343.5,
+                    "text": "村庄（热带草原）",
+                    "image": "assets/ui/marker/marker_circle.png"
+                },
+                {
+                    "imageAnchor": [
+                        0.5,
+                        0.5
+                    ],
+                    "imageScale": 1.5,
+                    "textColor": "white",
+                    "offsetX": 0,
+                    "offsetY": 18,
+                    "font": "12px Microsoft Yahei",
+                    "textAlign": "center",
+                    "textJustify": "center",
+                    "textPadding": [
+                        2,
+                        8,
+                        2,
+                        8
+                    ],
+                    "textStrokeColor": "black",
+                    "textStrokeWidth": 1,
+                    "textBackgroundColor": "rgba(105,105,105,0.42)",
+                    "textBackgroundRadius": 6,
+                    "textBackgroundStrokeWidth": 1,
+                    "x": 79.7,
+                    "z": 15.5,
+                    "text": "myWarp",
+                    "image": "assets/ui/marker/marker_circle.png"
                 }
             ]
         },
@@ -108,6 +388,62 @@
                     "x": -287.6,
                     "z": -378.2,
                     "text": "火柴盒 (Jinhao997)",
+                    "image": "assets/ui/marker/marker_mansion.png"
+                },
+                {
+                    "imageAnchor": [
+                        0.5,
+                        0.5
+                    ],
+                    "imageScale": 1.5,
+                    "textColor": "white",
+                    "offsetX": 0,
+                    "offsetY": 18,
+                    "font": "12px Microsoft Yahei",
+                    "textAlign": "center",
+                    "textJustify": "center",
+                    "textPadding": [
+                        2,
+                        8,
+                        2,
+                        8
+                    ],
+                    "textStrokeColor": "black",
+                    "textStrokeWidth": 1,
+                    "textBackgroundColor": "rgba(105,105,105,0.42)",
+                    "textBackgroundRadius": 6,
+                    "textBackgroundStrokeWidth": 1,
+                    "x": -294.2,
+                    "z": -430.5,
+                    "text": "双层小木屋 (Jinhao997)",
+                    "image": "assets/ui/marker/marker_mansion.png"
+                },
+                {
+                    "imageAnchor": [
+                        0.5,
+                        0.5
+                    ],
+                    "imageScale": 1.5,
+                    "textColor": "white",
+                    "offsetX": 0,
+                    "offsetY": 18,
+                    "font": "12px Microsoft Yahei",
+                    "textAlign": "center",
+                    "textJustify": "center",
+                    "textPadding": [
+                        2,
+                        8,
+                        2,
+                        8
+                    ],
+                    "textStrokeColor": "black",
+                    "textStrokeWidth": 1,
+                    "textBackgroundColor": "rgba(105,105,105,0.42)",
+                    "textBackgroundRadius": 6,
+                    "textBackgroundStrokeWidth": 1,
+                    "x": -278.6,
+                    "z": -431.8,
+                    "text": "双层小木屋 (Jinhao997)",
                     "image": "assets/ui/marker/marker_mansion.png"
                 }
             ]

@@ -16,5 +16,17 @@
         "uuid": "cf46fbe2-6d76-32c2-bb38-00f9381ffd01",
         "xuid": "2535421085180566",
         "password": "$2b$10$qdoZl1N3WDNM4DjocgviLeNxwwcvzI1kbdHRfkJB3i4O.CcDpPuXy"
+    },
+    "Dorso5986": {
+        "realName": "Dorso5986",
+        "uuid": "76ad40af-f5a9-3997-be6a-5e65c0d40fdf",
+        "xuid": "2535426898420413",
+        "password": "$2b$10$jYXASRekiMxldzI8WiXd2uVE79wh4d5SlYfISk5xEd7//psxzDVyy"
+    },
+    "Moore3444": {
+        "realName": "Moore3444",
+        "uuid": "990a1c0b-81fc-34b7-a450-ec0622d9b791",
+        "xuid": "2535414163251476",
+        "password": "$2b$10$FvxBxnDVCtvYDC44vYwOZOK4uDJ53jNKdu55Ivpwg2SQgASjrFJ6."
     }
 }

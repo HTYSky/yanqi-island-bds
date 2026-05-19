@@ -1,0 +1,38 @@
+{
+	"serverId": "60b9a7cbfb1845d3925e343fb621cd36",
+	"hashKey": "465ff7f11039f73f0fd93e7cf29312561f53781614c96dd013e1baaa5ce155d1",
+	"serverName": "雁栖岛",
+	"addSimulatedPlayerTip": true,
+	"chatFormat": {
+		"game": "<{name}> {msg}",
+		"group": "群:<{nick}> {msg}",
+		"post_chat": true,
+		"post_prefix": "",
+		"max_length": 64
+	},
+	"motd": {
+		"server_ip": "mc.iskyone.com",
+		"server_port": 2610,
+		"api": "http://motd.txssb.cn/api/app_img?ip={server_ip}&port={server_port}&dark=true",
+		"text": "共{online}人在线",
+		"markdown": true,
+		"customMarkdown": false,
+		"output_online_list": true,
+		"post_img": true
+	},
+	"customCommand": [
+		{
+			"key": "加白名",
+			"command": "whitelist add &1",
+			"permission": 0
+		},
+		{
+			"key": "管理加白名",
+			"command": "whitelist add &1",
+			"permission": 1
+		}
+	],
+	"callbackConvertImg": 0,
+	"connectMethod": 1,
+	"version": 8
+}

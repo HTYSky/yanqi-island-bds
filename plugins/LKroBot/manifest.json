@@ -1,0 +1,12 @@
+{
+    "entry": "LKroBot.js",
+    "name": "LKroBot",
+    "type": "lse-quickjs",
+    "version": "1.2.4",
+    "description": "LKroBot",
+    "dependencies": [
+        {
+            "name": "legacy-script-engine-quickjs"
+        }
+    ]
+}

@@ -37,6 +37,22 @@
         },
         {
             "images": true,
+            "image": "textures/ui/profile_new_look",
+            "money": 0,
+            "text": "假人系统",
+            "command": "lkbot",
+            "type": "comm"
+        },
+        {
+            "images": true,
+            "image": "textures/ui/conduit_power_effect",
+            "money": 0,
+            "text": "自由视角",
+            "command": "fcam",
+            "type": "comm"
+        },
+        {
+            "images": true,
             "image": "textures/items/sign",
             "money": 0,
             "text": "公告",

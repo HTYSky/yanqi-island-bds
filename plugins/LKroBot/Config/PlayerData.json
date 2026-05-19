@@ -1,0 +1,49 @@
+{
+    "80da221f-73d7-393a-9a72-8a285adac610": {
+        "boos": "meSkyone",
+        "quantity": 20,
+        "botList": {
+            "家里蹲§b§l假人": {
+                "botPos": {
+                    "x": -288.78021240234375,
+                    "y": 69,
+                    "z": -433.70001220703125,
+                    "dimid": 0
+                },
+                "invincible": true,
+                "preventAndRepel": true,
+                "saturation": true
+            }
+        },
+        "lastOperation": 1779201411939
+    },
+    "76ad40af-f5a9-3997-be6a-5e65c0d40fdf": {
+        "boos": "Dorso5986",
+        "quantity": 20,
+        "botList": {
+            "接生§b§l假人": {
+                "botPos": {
+                    "x": -311.0472412109375,
+                    "y": 68,
+                    "z": -331.0379638671875,
+                    "dimid": 0
+                },
+                "invincible": true,
+                "preventAndRepel": true,
+                "saturation": true
+            },
+            "铁人§b§l假人": {
+                "botPos": {
+                    "x": -286.9211120605469,
+                    "y": 70,
+                    "z": -536.3943481445313,
+                    "dimid": 0
+                },
+                "invincible": true,
+                "preventAndRepel": true,
+                "saturation": true
+            }
+        },
+        "lastOperation": 1779201402657
+    }
+}
