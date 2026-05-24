@@ -26,6 +26,7 @@ config.init('billingEnabled', true);//是否启用计费功能
 config.init('saveInterval', 60000);//保存剩余时间间隔(毫秒)，默认1分钟
 config.init('cleanupExpiredPlayerDataEnabled', true);//是否启用清除长时间不使用的玩家数据(新增假人和上线假人更新操作时间)
 config.init('cleanupExpiredPlayerDataInterval', 10);//清理长时间不实用玩家数据时间间隔(天)
+config.init('sleepAutoOffline', true);//是否启用睡觉时自动下线假人功能
 
 /**
  * 获取当前在线的模拟玩家列表。
@@ -3245,3 +3246,235 @@ function RemoveBlacklistPlayerGui(player) {
     });
 }
 
+
+// ============================================================
+// 睡觉跳过夜晚自动管理假人功能
+// 当所有真实玩家都在床上准备跳过夜晚时，自动下线所有假人
+// 夜晚成功跳过后，自动重新上线之前下线的假人
+// ============================================================
+
+const SLEEP_CHECK_INTERVAL = 2000; // 每2秒检查一次
+let sleepState = {
+	sleepingPlayers: new Map(),       // uuid -> 最后一次点击床的时间戳
+	autoDisconnectedBots: [],         // [{botName, ownerUuid, pos, invincible, preventAndRepel, saturation}]
+	isWaitingForDay: false,
+};
+
+function isSleepableTime() {
+	const time = mc.getTime(0);
+	return time >= 12542; // 玩家可以开始睡觉的时间（黄昏后）
+}
+
+function isDayTime() {
+	const time = mc.getTime(0);
+	return time >= 0 && time < 12542;
+}
+
+function getRealPlayers() {
+	return mc.getOnlinePlayers().filter(p => !p.isSimulatedPlayer());
+}
+
+function disconnectAllBotsForSleep() {
+	const bots = getSimulatedPlayers();
+	if (bots.length === 0) return;
+
+	sleepState.autoDisconnectedBots = [];
+
+	bots.forEach(bot => {
+		try {
+			const botData = SelectName(bot.name);
+			const ownerUuid = botData ? data.name2uuid(botData.boos) : null;
+			const pldt = ownerUuid ? plData.get(ownerUuid) : null;
+			const savedBotData = pldt && pldt.botList ? pldt.botList[bot.name] : null;
+
+			const botInfo = {
+				botName: bot.name,
+				ownerUuid: ownerUuid,
+				pos: savedBotData && savedBotData.botPos ? savedBotData.botPos : {
+					x: bot.feetPos.x,
+					y: bot.feetPos.y,
+					z: bot.feetPos.z,
+					dimid: bot.feetPos.dimid
+				},
+				invincible: savedBotData ? savedBotData.invincible : false,
+				preventAndRepel: savedBotData ? savedBotData.preventAndRepel : false,
+				saturation: savedBotData ? savedBotData.saturation : false
+			};
+
+			sleepState.autoDisconnectedBots.push(botInfo);
+
+			// 停止假人的所有操作
+			stopAttack(bot, bot.name);
+			stopDestroy(bot, bot.name);
+			stopInteract(bot, bot.name);
+			stopJump(bot, bot.name);
+			stopUseOfItems(bot, bot.name);
+
+			// 下线假人
+			bot.simulateDisconnect();
+		} catch (e) {
+			logger.error("[LKroBot] 睡觉自动下线假人 " + bot.name + " 失败: " + e);
+		}
+	});
+
+	sleepState.isWaitingForDay = true;
+
+	if (sleepState.autoDisconnectedBots.length > 0) {
+		logger.info("[LKroBot] 所有真实玩家正在睡觉，已自动下线 " + sleepState.autoDisconnectedBots.length + " 个假人以跳过夜晚");
+		mc.broadcast("[LKroBot] 所有玩家已入睡，假人已自动下线，正在跳过夜晚...");
+	}
+}
+
+function reconnectDisconnectedBots(showBroadcast) {
+	if (sleepState.autoDisconnectedBots.length === 0) return;
+
+	let reconnected = 0;
+	const botList = [...sleepState.autoDisconnectedBots];
+
+	botList.forEach(botInfo => {
+		try {
+			// 检查假人是否已经在线（可能被手动重新上线）
+			if (getBotsByPlayerName(botInfo.botName)) {
+				reconnected++;
+				return;
+			}
+
+			const pos = new FloatPos(
+				botInfo.pos.x,
+				botInfo.pos.y,
+				botInfo.pos.z,
+				botInfo.pos.dimid
+			);
+			const bot = mc.spawnSimulatedPlayer(botInfo.botName, pos);
+
+			if (bot) {
+				if (botInfo.invincible) bot.addEffect(11, -1, 255, false);
+				if (botInfo.preventAndRepel) bot.setKnockbackResistance(1);
+				if (botInfo.saturation) bot.addEffect(23, -1, 255, false);
+
+				// 更新玩家操作时间
+				if (botInfo.ownerUuid) {
+					const pldt = plData.get(botInfo.ownerUuid);
+					if (pldt) {
+						pldt.lastOperation = Date.now();
+						plData.set(botInfo.ownerUuid, pldt);
+					}
+				}
+
+				reconnected++;
+			}
+		} catch (e) {
+			logger.error("[LKroBot] 重新上线假人 " + botInfo.botName + " 失败: " + e);
+		}
+	});
+
+	sleepState.autoDisconnectedBots = [];
+	sleepState.isWaitingForDay = false;
+	sleepState.sleepingPlayers.clear();
+
+	if (reconnected > 0 && showBroadcast) {
+		logger.info("[LKroBot] 夜晚已跳过，已自动重新上线 " + reconnected + " 个假人");
+		mc.broadcast("[LKroBot] 新的一天开始了，假人已自动重新上线！");
+	}
+
+	plData.read();
+}
+
+function checkAllRealPlayersSleeping() {
+	if (!config.get("sleepAutoOffline")) return;
+	if (!isSleepableTime()) {
+		// 不在可睡觉时间，清理已记录的睡眠状态
+		if (sleepState.sleepingPlayers.size > 0 && !sleepState.isWaitingForDay) {
+			sleepState.sleepingPlayers.clear();
+		}
+		return;
+	}
+
+	const realPlayers = getRealPlayers();
+	if (realPlayers.length === 0) return;
+
+	// 清理已离线的玩家
+	const onlineUuids = new Set(realPlayers.map(p => p.uuid));
+	for (const uuid of sleepState.sleepingPlayers.keys()) {
+		if (!onlineUuids.has(uuid)) {
+			sleepState.sleepingPlayers.delete(uuid);
+		}
+	}
+
+	// 检查是否所有真实玩家都已标记为"睡觉中"
+	const allSleeping = realPlayers.every(p => sleepState.sleepingPlayers.has(p.uuid));
+
+	if (allSleeping && !sleepState.isWaitingForDay) {
+		// 确认所有玩家至少已在床中停留了3秒（排除误点击）
+		const now = Date.now();
+		const allSettled = realPlayers.every(p => {
+			const timestamp = sleepState.sleepingPlayers.get(p.uuid);
+			return timestamp && (now - timestamp) > 3000;
+		});
+
+		if (allSettled && getSimulatedPlayers().length > 0) {
+			disconnectAllBotsForSleep();
+		}
+	}
+}
+
+// 监听玩家使用物品（检测点击床睡觉）
+mc.listen("onUseItemOn", (player, item, block, side, pos) => {
+	if (!config.get("sleepAutoOffline")) return true;
+	if (!player || player.isSimulatedPlayer()) return true;
+	if (!block) return true;
+
+	try {
+		const blockName = (block.name || "").toLowerCase();
+		const blockType = (block.type || "").toLowerCase();
+
+		// 检查是否点击了床
+		if (blockName.includes("bed") || blockType.includes("bed")) {
+			if (isSleepableTime()) {
+				// 玩家已经记录为"睡觉中" → 再次点击床表示起床
+				if (sleepState.sleepingPlayers.has(player.uuid)) {
+					sleepState.sleepingPlayers.delete(player.uuid);
+				} else {
+					sleepState.sleepingPlayers.set(player.uuid, Date.now());
+				}
+				// 延迟检查，给玩家躺下或起床的时间
+				setTimeout(() => checkAllRealPlayersSleeping(), 3500);
+			}
+		}
+	} catch (e) {}
+
+	return true;
+});
+
+// 玩家离开时清理追踪状态
+mc.listen("onLeft", (player) => {
+	if (!config.get("sleepAutoOffline")) return;
+	if (!player || player.isSimulatedPlayer()) return;
+
+	sleepState.sleepingPlayers.delete(player.uuid);
+
+	// 如果所有真实玩家都离开了，重连假人
+	if (sleepState.isWaitingForDay && getRealPlayers().length === 0) {
+		reconnectDisconnectedBots(false);
+	}
+});
+
+// 定期检查时间变化和睡觉状态
+setInterval(() => {
+	if (!config.get("sleepAutoOffline")) return;
+
+	try {
+		// 检测白天到来（夜晚被跳过或正常天亮）
+		if (sleepState.isWaitingForDay && isDayTime()) {
+			reconnectDisconnectedBots(true);
+			return;
+		}
+
+		// 在夜间定期检查所有玩家是否在睡觉
+		if (!sleepState.isWaitingForDay && isSleepableTime()) {
+			checkAllRealPlayersSleeping();
+		}
+	} catch (e) {
+		logger.error("[LKroBot] 睡觉检测定时器出错: " + e);
+	}
+}, SLEEP_CHECK_INTERVAL);
