@@ -5,7 +5,7 @@ var UnminedMapProperties = {
     defaultZoom: 0,
     imageFormat: "png",
     minRegionX: -9,
-    minRegionZ: -8,
+    minRegionZ: -24,
     maxRegionX: 8,
     maxRegionZ: 9,
     worldName: "Yanqi Lake",

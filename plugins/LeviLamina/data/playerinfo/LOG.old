@@ -1,3 +1,9 @@
-2026/05/18-22:00:05.740000 11128 Recovering log #99
-2026/05/18-22:00:05.766000 11128 Delete type=0 #99
-2026/05/18-22:00:05.766000 11128 Delete type=3 #98
+2026/05/19-23:09:37.829000 8128 Log #103: 1 ops saved to Table #104 OK
+2026/05/19-23:09:37.829000 8128 Archiving ./plugins/LeviLamina\data\playerinfo/000103.log: OK
+2026/05/19-23:09:37.829000 8128 Table #9: 1 entries OK
+2026/05/19-23:09:37.829000 8128 Table #28: 1 entries OK
+2026/05/19-23:09:37.829000 8128 Table #35: 1 entries OK
+2026/05/19-23:09:37.829000 8128 Table #70: 1 entries OK
+2026/05/19-23:09:37.829000 8128 Table #104: 1 entries OK
+2026/05/19-23:09:37.829000 8128 Archiving ./plugins/LeviLamina\data\playerinfo/MANIFEST-000102: OK
+2026/05/19-23:09:37.845000 8128 **** Repaired leveldb ./plugins/LeviLamina\data\playerinfo; recovered 5 files; 976 bytes. Some data may have been lost. ****

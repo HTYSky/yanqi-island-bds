@@ -15,28 +15,28 @@
                 "saturation": true
             }
         },
-        "lastOperation": 1779201411939
+        "lastOperation": 1779290278780
     },
     "76ad40af-f5a9-3997-be6a-5e65c0d40fdf": {
         "boos": "Dorso5986",
         "quantity": 20,
         "botList": {
-            "接生§b§l假人": {
+            "铁人§b§l假人": {
                 "botPos": {
-                    "x": -311.0472412109375,
-                    "y": 68,
-                    "z": -331.0379638671875,
+                    "x": -279.8638000488281,
+                    "y": 70,
+                    "z": -550.598876953125,
                     "dimid": 0
                 },
                 "invincible": true,
                 "preventAndRepel": true,
                 "saturation": true
             },
-            "铁人§b§l假人": {
+            "接生§b§l假人": {
                 "botPos": {
-                    "x": -286.9211120605469,
-                    "y": 70,
-                    "z": -536.3943481445313,
+                    "x": -328.3968505859375,
+                    "y": 65,
+                    "z": -330.626220703125,
                     "dimid": 0
                 },
                 "invincible": true,
@@ -44,6 +44,6 @@
                 "saturation": true
             }
         },
-        "lastOperation": 1779201402657
+        "lastOperation": 1779592068733
     }
 }
