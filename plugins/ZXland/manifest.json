@@ -1,0 +1,13 @@
+{
+    "entry": "ZXland.js",
+    "name": "ZXland",
+    "type": "lse-quickjs",
+    "version": "1.1.0",
+    "description": "ZXland领地系统",
+    "extraInfo": {},
+    "dependencies": [
+        {
+            "name": "legacy-script-engine-quickjs"
+        }
+    ]
+}

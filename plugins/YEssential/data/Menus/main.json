@@ -2,37 +2,20 @@
     "title": "雁栖岛菜单",
     "content": "请选择:",
     "buttons": [
-
-        {
-            "images": true,
-            "image": "textures/ui/check",
-            "money": 0,
-            "text": "签到",
-            "command": "sign",
-            "type": "comm"
-        },
-        {
-            "images": true,
-            "image": "textures/items/bed_red",
-            "money": 0,
-            "text": "家园系统",
-            "command": "home",
-            "type": "comm"
-        },
         {
             "images": true,
             "image": "textures/ui/portalBg",
             "money": 0,
-            "text": "传送选项",
+            "text": "传送系统",
             "command": "tp",
             "type": "form"
         },
         {
             "images": true,
-            "image": "textures/items/gold_pickaxe",
+            "image": "textures/ui/icon_recipe_construction",
             "money": 0,
-            "text": "连锁挖矿",
-            "command": "fm",
+            "text": "领地系统",
+            "command": "land",
             "type": "comm"
         },
         {
@@ -49,6 +32,22 @@
             "money": 0,
             "text": "自由视角",
             "command": "fcam",
+            "type": "comm"
+        },
+        {
+            "images": true,
+            "image": "textures/items/gold_pickaxe",
+            "money": 0,
+            "text": "连锁挖矿",
+            "command": "fm",
+            "type": "comm"
+        },
+        {
+            "images": true,
+            "image": "textures/ui/check",
+            "money": 0,
+            "text": "签到",
+            "command": "sign",
             "type": "comm"
         },
         {

@@ -10,5 +10,6 @@
     "billingEnabled": 0,
     "saveInterval": 60000,
     "cleanupExpiredPlayerDataEnabled": 0,
-    "cleanupExpiredPlayerDataInterval": 10
+    "cleanupExpiredPlayerDataInterval": 10,
+    "sleepAutoOffline": 1
 }

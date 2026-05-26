@@ -12,6 +12,14 @@
         },
         {
             "images": true,
+            "image": "textures/items/bed_red",
+            "money": 0,
+            "text": "家园传送",
+            "command": "home",
+            "type": "comm"
+        },
+        {
+            "images": true,
             "image": "textures/ui/World",
             "money": 0,
             "text": "公共传送",
@@ -22,7 +30,7 @@
             "images": true,
             "image": "textures/ui/recap_glyph_desaturated",
             "money": 0,
-            "text": "回到死亡点",
+            "text": "死亡点传送",
             "command": "back",
             "type": "comm"
         },
