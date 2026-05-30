@@ -1,2 +1,9 @@
-# 排除 tiles 目录内的所有文件，但保留目录本身
+# 排除 tiles 目录内的所有文件
 plugins/BDSLM_JS/unmined-web/tiles/*
+
+# 排除下载缓存目录
+.cache/
+
+# 排除日志文件和备份
+*.log
+*.bak
