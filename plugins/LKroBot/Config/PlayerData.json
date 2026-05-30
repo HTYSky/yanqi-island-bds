@@ -15,7 +15,7 @@
                 "saturation": true
             }
         },
-        "lastOperation": 1779626451514
+        "lastOperation": 1780072030848
     },
     "76ad40af-f5a9-3997-be6a-5e65c0d40fdf": {
         "boos": "Dorso5986",
@@ -44,6 +44,46 @@
                 "saturation": true
             }
         },
-        "lastOperation": 1779592068733
+        "lastOperation": 1780156570161
+    },
+    "990a1c0b-81fc-34b7-a450-ec0622d9b791": {
+        "boos": "Moore3444",
+        "quantity": 20,
+        "botList": {
+            "劫掠塔塔顶监工§b§l假人": {
+                "botPos": {
+                    "x": -776.2999877929688,
+                    "y": 184,
+                    "z": 682.2999877929688,
+                    "dimid": 0
+                },
+                "invincible": true,
+                "preventAndRepel": true,
+                "saturation": true
+            },
+            "劫掠塔塔底仇恨假人§b§l假人": {
+                "botPos": {
+                    "x": -776.6396484375,
+                    "y": 65,
+                    "z": 681.3670043945313,
+                    "dimid": 0
+                },
+                "invincible": true,
+                "preventAndRepel": true,
+                "saturation": true
+            },
+            "劫掠塔塔底仇恨假人2号§b§l假人": {
+                "botPos": {
+                    "x": -776.732177734375,
+                    "y": 65,
+                    "z": 681.3909301757813,
+                    "dimid": 0
+                },
+                "invincible": true,
+                "preventAndRepel": true,
+                "saturation": true
+            }
+        },
+        "lastOperation": 1780156570184
     }
 }
