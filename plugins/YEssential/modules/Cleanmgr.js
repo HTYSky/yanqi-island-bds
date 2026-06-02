@@ -235,7 +235,13 @@ var CleanMgr = (function () {
   function shouldKeep(e) {
     if (!e) return true;
     try { if (e.type === "minecraft:player") return true; } catch (ex) {}
-    
+
+    // 保留一切非物品实体（即所有生物，包括敌对、被动、中立生物等）
+    try {
+      if (typeof e.isItemEntity === "function" && !e.isItemEntity()) return true;
+    } catch (ex) {}
+
+    // 以下白名单仅对掉落物（物品实体）生效
     try {
       var type = e.type;
       for (var i = 0; i < whitelistRegex.length; i++) {
@@ -256,8 +262,8 @@ var CleanMgr = (function () {
 
     try {
       var nbt = e.getNbt();
-      if (nbt) { 
-        var obj = nbt.toObject(); 
+      if (nbt) {
+        var obj = nbt.toObject();
         if (obj && (obj.CustomName || obj.IsTamed)) return true;
       }
     } catch (ex) {}
