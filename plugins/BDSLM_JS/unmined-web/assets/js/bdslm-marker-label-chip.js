@@ -7,6 +7,16 @@
     /** bump 以使浏览器丢弃旧 PNG 缓存（逻辑/绘图变更时递增） */
     var CHIP_RENDER_VER = 8;
 
+    /**
+     * 剥离 Minecraft 格式化代码（§ + 单个字符）。
+     * 格式码列表：颜色 0-9 a-f，样式 k l m n o，重置 r。
+     * Canvas fillText 不支持内联颜色，直接移除避免乱码。
+     */
+    function stripMcColorCodes(text) {
+        if (text == null) return "";
+        return String(text).replace(/§[0-9a-fk-or]/gi, "");
+    }
+
     function padNorm(p) {
         if (!Array.isArray(p) || p.length < 4) return [2, 8, 2, 8];
         var t = +p[0], r = +p[1], b = +p[2], l = +p[3];
@@ -90,7 +100,7 @@
         var pad = padNorm(item.textPadding);
         var c = document.createElement("canvas").getContext("2d");
         c.font = font;
-        var tw = Math.ceil(c.measureText(String(item.text || "")).width);
+        var tw = Math.ceil(c.measureText(stripMcColorCodes(item.text)).width);
         var sw = item.textStrokeWidth != null ? Number(item.textStrokeWidth) : 0;
         if (!isFinite(sw) || sw < 0) sw = 0;
         tw += Math.ceil(sw * 2);
@@ -217,7 +227,7 @@
                     displacement: [ox, -oy]
                 };
                 var textOptsChip = {
-                    text: item.text,
+                    text: stripMcColorCodes(item.text),
                     font: font,
                     offsetX: item.offsetX,
                     offsetY: item.offsetY,
@@ -256,7 +266,7 @@
                 }
             } else {
                 var textOptsPlain = {
-                    text: item.text,
+                    text: stripMcColorCodes(item.text),
                     font: font,
                     offsetX: item.offsetX,
                     offsetY: item.offsetY,

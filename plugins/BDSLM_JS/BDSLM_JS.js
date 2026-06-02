@@ -329,7 +329,7 @@ function httpServer(){
                 }
                 item["x"] = pls[i].blockPos.x;
                 item["z"] = pls[i].blockPos.z;
-                item["text"] = pls[i].realName;
+                item["text"] = stripMcColorCodes(pls[i].realName);
                 writeOut["playerMarkers"].push(item);
             }
             delete writeOut["markerConfig"];
@@ -886,7 +886,7 @@ function getXyzMarkerLayers(){
             let markerConfig = JSON.parse(JSON.stringify(layer["markers_default"]));
             markerConfig.x = warp.pos.x;
             markerConfig.z = warp.pos.z;
-            markerConfig.text = warp.name;
+            markerConfig.text = stripMcColorCodes(warp.name);
             markerConfig.image ??= layer["controlConfig"]["img"];
             layer.markers.push(markerConfig);
         }
@@ -1032,6 +1032,16 @@ function parseXZ(v) {
     return Number.isFinite(n) ? n : null;
 }
 
+/**
+ * 剥离 Minecraft 格式化代码（§ + 单个字符）。
+ * 格式码：颜色 0-9 a-f，样式 k l m n o，重置 r。
+ * § 在 Canvas/标记文本中无法渲染，会导致乱码。
+ */
+function stripMcColorCodes(text) {
+    if (text == null) return "";
+    return String(text).replace(/§[0-9a-fk-or]/gi, "");
+}
+
 /** 与 ShareHome / getXyzMarkerLayers 一致：仅主世界 dimid===0 */
 function markerFromYzRecord(markerBase, imgUrl, labelText, rec) {
     let dimid = parseDimId(rec.dimid);
@@ -1042,7 +1052,7 @@ function markerFromYzRecord(markerBase, imgUrl, labelText, rec) {
     let m = JSON.parse(JSON.stringify(markerBase));
     m.x = x;
     m.z = z;
-    m.text = labelText;
+    m.text = stripMcColorCodes(labelText);
     if (imgUrl) m.image = imgUrl;
     return m;
 }
