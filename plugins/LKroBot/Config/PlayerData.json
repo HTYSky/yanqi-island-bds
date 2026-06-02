@@ -42,9 +42,31 @@
                 "invincible": true,
                 "preventAndRepel": true,
                 "saturation": true
+            },
+            "刷雪§b§l假人": {
+                "botPos": {
+                    "x": -981.2999877929688,
+                    "y": 69,
+                    "z": -416.70001220703125,
+                    "dimid": 0
+                },
+                "invincible": true,
+                "preventAndRepel": true,
+                "saturation": true
+            },
+            "gold§b§l假人": {
+                "botPos": {
+                    "x": -333.6993713378906,
+                    "y": 66,
+                    "z": -453.70001220703125,
+                    "dimid": 0
+                },
+                "invincible": true,
+                "preventAndRepel": true,
+                "saturation": true
             }
         },
-        "lastOperation": 1780156570161
+        "lastOperation": 1780401652502
     },
     "990a1c0b-81fc-34b7-a450-ec0622d9b791": {
         "boos": "Moore3444",
@@ -61,22 +83,11 @@
                 "preventAndRepel": true,
                 "saturation": true
             },
-            "劫掠塔塔底仇恨假人§b§l假人": {
+            "前哨塔塔底§b§l假人": {
                 "botPos": {
-                    "x": -776.6396484375,
+                    "x": -776.451416015625,
                     "y": 65,
-                    "z": 681.3670043945313,
-                    "dimid": 0
-                },
-                "invincible": true,
-                "preventAndRepel": true,
-                "saturation": true
-            },
-            "劫掠塔塔底仇恨假人2号§b§l假人": {
-                "botPos": {
-                    "x": -776.732177734375,
-                    "y": 65,
-                    "z": 681.3909301757813,
+                    "z": 681.4844970703125,
                     "dimid": 0
                 },
                 "invincible": true,
@@ -84,6 +95,6 @@
                 "saturation": true
             }
         },
-        "lastOperation": 1780156570184
+        "lastOperation": 1780401652513
     }
 }

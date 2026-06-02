@@ -1,10 +1,10 @@
 {
     "meSkyone": {
-        "count": 16,
-        "weekly_count": 5,
-        "monthly_count": 16,
-        "cont_sign": 4,
-        "sign_date": "2026-05-30"
+        "count": 18,
+        "weekly_count": 2,
+        "monthly_count": 18,
+        "cont_sign": 1,
+        "sign_date": "2026-06-03"
     },
     "Jinhao997": {
         "count": 3,
@@ -21,11 +21,11 @@
         "sign_date": "2026-05-16"
     },
     "Dorso5986": {
-        "count": 7,
-        "weekly_count": 6,
-        "monthly_count": 7,
-        "cont_sign": 2,
-        "sign_date": "2026-05-30"
+        "count": 8,
+        "weekly_count": 1,
+        "monthly_count": 8,
+        "cont_sign": 3,
+        "sign_date": "2026-05-31"
     },
     "Moore3444": {
         "count": 1,
@@ -33,5 +33,12 @@
         "monthly_count": 1,
         "cont_sign": 1,
         "sign_date": "2026-05-28"
+    },
+    "Bestom927": {
+        "count": 2,
+        "weekly_count": 2,
+        "monthly_count": 1,
+        "cont_sign": 2,
+        "sign_date": "2026-06-01"
     }
 }

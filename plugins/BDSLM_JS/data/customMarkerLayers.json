@@ -623,6 +623,62 @@
                     "textBackgroundColor": "rgba(105,105,105,0.42)",
                     "textBackgroundRadius": 6,
                     "textBackgroundStrokeWidth": 1,
+                    "x": -979.5,
+                    "z": -414.1,
+                    "text": "刷雪",
+                    "image": "assets/ui/marker/marker_circle.png"
+                },
+                {
+                    "imageAnchor": [
+                        0.5,
+                        0.5
+                    ],
+                    "imageScale": 1.5,
+                    "textColor": "white",
+                    "offsetX": 0,
+                    "offsetY": 18,
+                    "font": "12px Microsoft Yahei",
+                    "textAlign": "center",
+                    "textJustify": "center",
+                    "textPadding": [
+                        2,
+                        8,
+                        2,
+                        8
+                    ],
+                    "textStrokeColor": "black",
+                    "textStrokeWidth": 1,
+                    "textBackgroundColor": "rgba(105,105,105,0.42)",
+                    "textBackgroundRadius": 6,
+                    "textBackgroundStrokeWidth": 1,
+                    "x": -447.7,
+                    "z": -575.7,
+                    "text": "gold",
+                    "image": "assets/ui/marker/marker_circle.png"
+                },
+                {
+                    "imageAnchor": [
+                        0.5,
+                        0.5
+                    ],
+                    "imageScale": 1.5,
+                    "textColor": "white",
+                    "offsetX": 0,
+                    "offsetY": 18,
+                    "font": "12px Microsoft Yahei",
+                    "textAlign": "center",
+                    "textJustify": "center",
+                    "textPadding": [
+                        2,
+                        8,
+                        2,
+                        8
+                    ],
+                    "textStrokeColor": "black",
+                    "textStrokeWidth": 1,
+                    "textBackgroundColor": "rgba(105,105,105,0.42)",
+                    "textBackgroundRadius": 6,
+                    "textBackgroundStrokeWidth": 1,
                     "x": -775.3,
                     "z": 681,
                     "text": "前哨塔底部",
