@@ -1,6 +1,8 @@
 # 雁栖岛 Minecraft 基岩版服务器
 
-基于 **Minecraft Bedrock Dedicated Server (BDS)** 搭建，使用 **LeviLamina** 模组加载器并集成多个插件，为玩家提供丰富的游戏体验。
+这是雁栖岛服务器项目，此仓库主要用于服务器备份整理和一起开发集成新功能，祝大家玩得愉快！
+
+基于 **Minecraft Bedrock Dedicated Server (BDS)** 搭建，使用 **LeviLamina** 模组加载器并集成多个插件。
 
 ---
 
