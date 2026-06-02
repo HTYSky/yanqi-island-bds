@@ -1048,8 +1048,8 @@ function markerFromYzRecord(markerBase, imgUrl, labelText, rec) {
 }
 
 function buildYeEssentialLayersPayload(harvestedWarpMarkers, harvestedHomeMarkers) {
-    harvestedWarpMarkers = harvestedWarpMarkers ?? [];
-    harvestedHomeMarkers = harvestedHomeMarkers ?? [];
+    // 注意：harvestedWarpMarkers / harvestedHomeMarkers 仅在从旧别名图层迁移时有用，
+    // 此后标记完全以 YEssential 数据文件为准，不再合并旧标记，以避免已删除的传送点/家残留。
     let c = getYeEssentialSyncConfig();
     let layerTemplate = xyzConfig_json.get("customMarkerLayers_default");
     if (!layerTemplate || typeof layerTemplate !== "object") {
@@ -1072,7 +1072,7 @@ function buildYeEssentialLayersPayload(harvestedWarpMarkers, harvestedHomeMarker
             if (mk) warpMarkersBuilt.push(mk);
         }
     }
-    let warpMarkers = dedupeYeMarkers(warpMarkersBuilt.concat(harvestedWarpMarkers));
+    let warpMarkers = dedupeYeMarkers(warpMarkersBuilt);
     if (warpMarkers.length > 0) {
         let L = JSON.parse(JSON.stringify(layerTemplate));
         L.layerName = YE_CANON_WARP_LAYER;
@@ -1106,7 +1106,7 @@ function buildYeEssentialLayersPayload(harvestedWarpMarkers, harvestedHomeMarker
             }
         }
     }
-    let homeMarkers = dedupeYeMarkers(homeMarkersBuilt.concat(harvestedHomeMarkers));
+    let homeMarkers = dedupeYeMarkers(homeMarkersBuilt);
     if (homeMarkers.length > 0) {
         let L = JSON.parse(JSON.stringify(layerTemplate));
         L.layerName = YE_CANON_HOME_LAYER;
